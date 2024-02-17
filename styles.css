@@ -1,0 +1,354 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+ 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  background: #000000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+ 
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 0 15px;
+  transition: border-bottom 0.3s;
+}
+
+.main-nav a:hover {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  border-radius: 50%; /* Make it rounded */
+  padding: 8px;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.icon:hover {
+  background-color: #ddd; /* Color change on hover */
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .sidenav {padding-top: 20px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.old-clothing-collection {
+  background-image: url('./img/rizwan\ bg.jpg.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: flex-start; /* Align content to the left */
+  text-align: left;
+  color: white;
+  padding-left: 10%; /* Adjust based on your design preference */
+  padding-right: 10%; /* Prevents text from stretching too far on larger screens */
+}
+
+.collection-content {
+  max-width: 800px; /* Adjust based on your design preference */
+}
+
+.collection-content h1 {
+  font-size: 60px; /* Larger font size */
+  font-weight: bold; /* Ensure it's bold */
+  margin-bottom: 30px; /* More space below the heading */
+  color: #EAEAEA; /* Light grey, but choose a color that fits your design */
+}
+
+.collection-content p {
+  font-size: 30px; /* Larger than standard text for emphasis */
+  margin-bottom: 40px; /* More space below the paragraph */
+}
+
+.explore-button {
+  font-size: 24px; /* Larger button text */
+  text-decoration: none;
+  color: white;
+  background-color: #000; /* Solid color for high contrast */
+  padding: 15px 30px; /* Larger padding for a bigger button */
+  border-radius: 8px; /* Rounded edges */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #444; /* Darker shade on hover */
+  color: #FFF; /* Keep text color white for readability */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .old-clothing-collection {
+    padding-left: 5%; /* Less padding on smaller screens */
+    padding-right: 5%;
+  }
+
+  .collection-content h1 {
+    font-size: 40px; /* Slightly smaller font size for mobile */
+    margin-bottom: 20px;
+  }
+
+  .collection-content p {
+    font-size: 20px; /* Smaller for mobile */
+    margin-bottom: 30px;
+  }
+
+  .explore-button {
+    font-size: 20px; /* Slightly smaller font size for mobile */
+    padding: 10px 20px;
+  }
+}
+
+
+
+
+.product-section {
+  text-align: center; /* Centering the title */
+  margin-bottom: 40px; /* Space below the section */
+  background-color: whitesmoke;
+
+}
+
+.section-title {
+  margin-bottom: 30px; /* Space below the title */
+  font-size: 32px; /* Size of the title */
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ 
+}
+
+.product {
+  width: 23%; /* Adjust based on container width */
+  margin-bottom: 20px; /* Space below each product */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.product img {
+  width: 100%; /* Make image fill the container width */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the area, cropping if necessary */
+  border: 2px solid transparent; /* Maintain layout consistency */
+  transition: border 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+.product h4, .product p {
+  margin: 5px 0; /* Margin for product name and price */
+}
+
+/* Hover effect for product images */
+.product:hover img {
+  border: 2px solid rgb(245, 6, 46);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .product {
+      width: 31%; /* 3 products per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+      width: 48%; /* 2 products per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+      width: 100%; /* 1 product per row */
+  }
+}
+
+
+.info-section {
+  background-color: white; /* Light background for the section */
+  padding: 20px; /* Padding around the section */
+}
+
+.info-container {
+  max-width: 1200px; /* Max width of the container */
+  margin: auto; /* Center the container */
+  background-color: whitesmoke; /* Background for the container */
+  border-radius: 10px; /* Rounded corners for the container */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
+}
+
+.info-heading {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #0056f7;
+}
+
+.row {
+  display: flex; /* Enables flex layout */
+  align-items: left; /* Align items vertically */
+  gap: 2px; /* Reduced space between text and image */
+}
+
+.text-area {
+  flex: 1; /* Allows text block to fill available space */
+  
+}
+
+.image-area img {
+  width: auto; /* Adjusts width automatically */
+  max-width: 300px; /* Maximum size of the image */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 50%; /* Makes the image circular */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column; /* Stack the text and image vertically on smaller screens */
+  }
+
+  .text-area, .image-area {
+      text-align: left; /* Center text and image on smaller screens */
+  }
+
+  .image-area {
+      margin-top: 20px; /* Adds space above the image on smaller screens */
+  }
+}
+
+.location-section {
+  padding: 20px;
+  background-color: white; /* Background color of the entire section */
+  text-align: center; /* Center-aligns the section content */
+}
+
+.location-container {
+  max-width: 1200px; /* Increased maximum width of the container for a wider appearance */
+  margin: auto; /* Centers the container */
+  background-color: whitesmoke; /* Background color of the container */
+  border-radius: 10px; /* Rounded corners of the container */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for depth */
+  padding: 20px; /* Padding inside the container */
+}
+
+.location-heading {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Color of the heading text */
+}
+
+.google-map-container {
+  position: relative;
+  width: 100%; /* Ensures the map container fills the width of its parent */
+  padding-top: 25%; /* Adjusts the top padding to decrease height, change percentage based on desired aspect ratio */
+  overflow: hidden;
+}
+
+.google-map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Removes the default border around the iframe */
+}
+
+
+
+
+.creator-section {
+  background-color: #000000; /* Light grey background for the section */
+  padding: 20px; /* Padding around the section */
+  text-align: center; /* Centering the content */
+  color: white;
+}
+
+.creator-container {
+  max-width: 800px; /* Max width of the container */
+  margin: auto; /* Center the container horizontally */
+  background-color: rgb(85, 82, 82); /* White background for the container */
+  border-radius: 5px; /* Slight rounding of corners for the container */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.creator-container p {
+  margin: 10px 0; /* Space between paragraphs */
+  font-size: 16px; /* Font size for readability */
+}
+
+.creator-container a {
+  color: #007bff; /* Standard link color, adjust as needed */
+  text-decoration: none; /* No underline on links */
+}
+
+.creator-container a:hover {
+  text-decoration: underline; /* Underline on hover for better accessibility */
+}
+
